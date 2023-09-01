@@ -3,13 +3,13 @@ import { Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap';
 import { useSpring, animated } from 'react-spring';
 
 
-const AnimatedDisplayCard = ({ item }) => {
+const AnimatedDisplayCard = ( { item } ) => {
     const { image, name, description } = item;
     const [toggle, setToggle] = useState(false);
 
     const animatedStyle = useSpring({
         opacity: toggle ? 1 : 0,
-        transform: toggle? 'scale(1,1)' : 'scale(1,0)',
+        transform: toggle ? 'scale(1,1)' : 'scale(1,0)',
         config: { duration: 500 }
     });
 
